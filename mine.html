@@ -34,12 +34,18 @@
     </style>
 </head>
 <body>
-<div id="outer">Div1
-    <div id="middle">Div2
-        <div id="inner">Div3
+<div id="outer" onclick="myScript('outer')">Div1
+    <div id="middle" onclick="myScript('middle')">Div2
+        <div id="inner" onclick="myScript('inner')">Div3
         </div>
     </div>
 </div>
     
 </body>
+<script type="text/javascript">
+    function myScript(name) {
+        console.log(name)
+        document.getElementById(name).style.fontWeight="bold";
+    }
+</script>
 </html>
